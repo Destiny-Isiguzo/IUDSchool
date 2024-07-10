@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+   /* COLORS */
+   --absolute-white: #fff;
+   --absolute-black: #000;
+   --primary-orange-65: #ff8d4c;
+   --primary-orange-70: #ff9e66;
+   --primary-orange-75: #ffae80;
+   --primary-orange-80: #ffbe99;
+   --primary-orange-90: #ffdecc;
+   --primary-orange-95: #ffefe5;
+   --primary-orange-97: #fff5f0;
+   --primary-orange-99: #fffcfa;
+   --text-grey-10: #191919;
+   --text-grey-15: #262626;
+   --text-grey-20: #333333;
+   --text-grey-30: #4c4c4d;
+   --text-grey-35: #59595a;
+   --text-grey-40: #656567;
+   --text-grey-60: #98989a;
+   --text-grey-70: #b3b3b3;
+
+   /* FONT FAMILY */
+   --ff-outfit: 'Outfit', sans-serif;
+   --ff-raleway: 'Raleway', sans-serif;
+
+   /* FONT WEIGHT */
+   --fw-regular: 400;
+   --fw-medium: 500;
+   --fw-semibold: 600;
+   --fw-bold: 700;
+   --fw-extrabold: 800;
+
+   /* FONT SIZE */
+   --fs-m4: 1.25rem; /* 20px */
+   --fs-m3: clamp(1.25rem, 1.1620rem + 0.3756vw, 1.5rem); /* 20px - 24px */
+   --fs-m2: clamp(1.375rem, 1.3310rem + 0.1878vw, 1.5rem); /* 22px - 24px */
+   --fs-m1: clamp(1.5rem, 1.3680rem + 0.5634vw, 1.875rem); /* 24px - 30px */
+   --fs-l3: clamp(1.75rem, 1.6180rem + 0.5634vw, 2.125rem); /* 28px - 34px */
+   --fs-l2: clamp(1.75rem, 1.5299rem + 0.9390vw, 2.375rem); /* 28px - 38px */
+   --fs-l1: clamp(1.875rem, 1.6989rem + 0.7512vw, 2.375rem); /* 30px - 38px */
+   --fs-xl: clamp(1.875rem, 1.6549rem + 0.9390vw, 2.5rem); /* 30px - 40px */
+   --fs-xxl: clamp(2.375rem, 2.1549rem + 0.9390vw, 3rem); /* 38px - 48px */
+}
+
+body {
+   background-color: var(--primary-orange-97);
+   color: var(--text-grey-20);
+   font-weight: var(--fw-medium);
+}
