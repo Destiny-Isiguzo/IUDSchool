@@ -33,6 +33,7 @@
    --fw-extrabold: 800;
 
    /* FONT SIZE */
+   --fs-s: .875rem; /* 14px */
    --fs-m4: 1.25rem; /* 20px */
    --fs-m3: clamp(1.25rem, 1.1620rem + 0.3756vw, 1.5rem); /* 20px - 24px */
    --fs-m2: clamp(1.375rem, 1.3310rem + 0.1878vw, 1.5rem); /* 22px - 24px */
@@ -42,10 +43,78 @@
    --fs-l1: clamp(1.875rem, 1.6989rem + 0.7512vw, 2.375rem); /* 30px - 38px */
    --fs-xl: clamp(1.875rem, 1.6549rem + 0.9390vw, 2.5rem); /* 30px - 40px */
    --fs-xxl: clamp(2.375rem, 2.1549rem + 0.9390vw, 3rem); /* 38px - 48px */
+
+   /* --fs-nav-menu-link: clamp(0.938rem, 0.9162rem + 0.0931vw, 1rem); */
+
+   /* SPACING & SIZES */
+   --border-radius-6: .375rem;
+   --border-radius-8: .5rem;
+   --border: .125rem solid var(--text-grey-15);
+
+   --z-index-fixed: 100;
+   --z-index-scrollup-btn: 1000;
+
+
+   --transition: .35s ease;
 }
 
 body {
    background-color: var(--primary-orange-97);
    color: var(--text-grey-20);
    font-weight: var(--fw-medium);
+   padding-inline: .625rem;
 }
+
+.main {
+   opacity: 0;
+   transition: var(--general-transition);
+   overflow: hidden;
+}
+
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+   background-color: rgb(193, 193, 193);
+   width: clamp(0.45rem, 0.3972rem + 0.2254vw, 0.6rem);
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: rgb(120, 120, 120);
+   border-radius: .5rem;
+}
+
+
+/* IMAGE SKELETON ANIMATION */
+.skeleton {
+   opacity: .7;
+   animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+   0% {
+      background-color: hsl(200, 20%, 75%);
+   }
+   
+   100% {
+      background-color: hsl(200, 20%, 90%);
+   }
+}
+
+
+
+
+/* .image-container {
+   position: relative;
+   width: 100%;
+   height: 0;
+   padding-bottom: 56.25%;
+} */
+
+/* .header-img {
+   object-fit: cover;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+} */
