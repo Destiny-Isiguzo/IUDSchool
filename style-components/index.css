@@ -33,7 +33,8 @@
    --fw-extrabold: 800;
 
    /* FONT SIZE */
-   --fs-s: .875rem; /* 14px */
+   --fs-s2: .875rem; /* 14px */
+   --fs-s1: .938rem; /* 15px */
    --fs-m4: 1.25rem; /* 20px */
    --fs-m3: clamp(1.25rem, 1.1620rem + 0.3756vw, 1.5rem); /* 20px - 24px */
    --fs-m2: clamp(1.375rem, 1.3310rem + 0.1878vw, 1.5rem); /* 22px - 24px */
@@ -51,25 +52,34 @@
    --border-radius-8: .5rem;
    --border: .125rem solid var(--text-grey-15);
 
+   --margin-inline: clamp(0.625rem, -1.0915rem + 7.3239vw, 5.5rem);
+
    --z-index-fixed: 100;
    --z-index-scrollup-btn: 1000;
 
 
    --transition: .35s ease;
+   --nav-menu-transition: .4s ease-in-out;
+}
+
+
+/* REUSABLE CLASSES */
+.container {
+   max-width: 1120px;
+   margin-inline: var(--margin-inline);
 }
 
 body {
    background-color: var(--primary-orange-97);
    color: var(--text-grey-20);
    font-weight: var(--fw-medium);
-   padding-inline: .625rem;
 }
 
-.main {
+/* .main {
    opacity: 0;
    transition: var(--general-transition);
    overflow: hidden;
-}
+} */
 
 
 /* SCROLLBAR */

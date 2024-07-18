@@ -1,55 +1,54 @@
 /**
- * Handle nav menu toggle
+ * Handle nav menu toggle & add active class
 */
-const navMenuToggleBtn = document.querySelector('.nav-menu-toggle-btn');
-const navMenuToggleBtnIcon = document.querySelector('.nav-menu-toggle-btn-icon');
-const navMenu = document.querySelector('.nav-menu');
-const navMenuLink = document.querySelector('.nav-menu-link');
-const navMenuOverlay = document.querySelector('.nav-menu-overlay');
+const showMenu = (toggleClass, navClass) => {
+   const toggle = document.querySelector(`.${toggleClass}`);
+   const nav = document.querySelector(`.${navClass}`);
 
-navMenuToggleBtn.addEventListener('click', () => {
-   navMenu.classList.toggle('show-nav-menu');
+   toggle.addEventListener('click', () => {
+      // add show-menu class to nav menu
+      nav.classList.toggle('show-menu');
 
-   if (navMenu.classList.contains('show-nav-menu')) {
-      navMenuToggleBtnIcon.classList.add('fa-xmark');
-      navMenuToggleBtnIcon.classList.remove('fa-bars');
-      navMenuOverlay.classList.toggle('nav-menu-overlay-active');
-   } else {
-      navMenuToggleBtnIcon.classList.remove('fa-xmark');
-      navMenuToggleBtnIcon.classList.add('fa-bars');
-   }
-})
+      // add icon to show & hide menu icon
+      toggle.classList.toggle('show-menu-icon');
+   })
+};
 
-navMenu.addEventListener('click', (e) => {
-   if (e.target.classList.contains('nav-menu-link')) {
-      navMenu.classList.remove('show-nav-menu');
-      navMenuToggleBtnIcon.classList.remove('fa-xmark');
-      navMenuToggleBtnIcon.classList.add('fa-bars');
-      navMenuOverlay.classList.remove('nav-menu-overlay-active');
-   }
-});
+showMenu('nav-menu-toggle-btn', 'nav');
 
 
-const dropdownLinks = document.querySelectorAll('.dropdown-link');
-const dropdownIcon = document.querySelector('.dropdown-icon');
+/**
+ * Add active class and remove menu onclick
+*/
+const navLinks = document.querySelectorAll('.nav-link');
+const nav = document.querySelector('.nav');
+const navMenuToggleBtn = document.querySelector('.nav-menu-toggle-btn')
 
-// Add event listener to each dropdown link
-dropdownLinks.forEach((link) => {
-   link.addEventListener('click', (e) => {
-      // Prevent default link behavior
-      e.preventDefault();
+function linkAction() {
+   navLinks.forEach((link) => link.classList.remove('nav-link-active'));
+   this.classList.add('nav-link-active');
+   nav.classList.toggle('show-menu');
+   navMenuToggleBtn.classList.toggle('show-menu-icon');
+}
 
-      // Get the dropdown menu associated with the link
-      const dropdownMenu = link.nextElementSibling;
+navLinks.forEach((link) => link.addEventListener('click', linkAction));
 
-      // Get the dropdown icon associated with the link
-      const dropdownIcon = link.querySelector('.dropdown-icon');
 
-      // Toggle the dropdown menu
-      dropdownMenu.classList.toggle('dropdown-active');
-      dropdownIcon.classList.toggle('dropdown-active');
+
+/**
+ * Handle dropdown menu
+*/
+const dropDownLinks = document.querySelectorAll('.dropdown-link');
+const dropDownMenus = document.querySelectorAll('.dropdown-menu');
+const dropDownIcons = document.querySelectorAll('.dropdown-icon');
+
+dropDownLinks.forEach((link, index) => {
+   link.addEventListener('click', () => {
+      dropDownMenus[index].classList.toggle('dropdown-menu-active');
+      dropDownIcons[index].classList.toggle('dropdown-icon-active');
    });
 });
+
 
 
 /**
