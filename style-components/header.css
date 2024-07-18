@@ -90,6 +90,7 @@
 
 .nav-open-icon,
 .nav-close-icon {
+   color: var(--text-grey-15);
    font-size: 1.5rem;
    position: absolute;
    inset: 0;
