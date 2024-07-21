@@ -54,17 +54,17 @@ dropDownLinks.forEach((link, index) => {
 /**
  * Dynamically add images after skeleton animations
 */
-const imageContainers = document.querySelectorAll('.image-container');
+const imageWrappers = document.querySelectorAll('.hero-image-wrapper');
 
-imageContainers.forEach((container) => {
-   const img = container.querySelector('img');
+imageWrappers.forEach((wrapper) => {
+   const img = wrapper.querySelector('img');
    const imagePath = `assets/images/${img.dataset.image}`; // assuming data-image attribute is set on the img tag
    const image = new Image();
 
    image.onload = () => {
       img.src = imagePath;
       img.classList.remove('skeleton');
-      container.style.backgroundImage = `url(${imagePath})`;
+      // container.style.backgroundImage = `url(${imagePath})`;
    };
 
    image.src = imagePath;
@@ -99,3 +99,35 @@ window.addEventListener('load', () => {
    addFadeOutClass(preloader);
    showHeaderAndMain();
 });
+
+
+
+/**
+ * Hero carousel
+*/
+// const heroImageContainer = document.querySelector('.hero-image-container');
+// const heroImageInner = document.querySelector('.hero-image-inner');
+// const heroImageWrapper = document.querySelectorAll('.hero-image-wrapper');
+// const paginationItems = document.querySelectorAll('.hero-image-pagination-item');
+
+// let currentSlide = 0;
+
+// // Set the auto-play interval
+// const autoPlayInterval = setInterval(() => {
+//   currentSlide = (currentSlide + 1) % heroImageWrapper.length;
+//   updateCarousel();
+// }, 7000);
+
+// // Update the carousel function
+// function updateCarousel() {
+//   // Update the carousel inner wrapper transform
+//   heroImageInner.style.transform = `translateX(${currentSlide * -100}%)`;
+
+//   // Update the pagination active state
+//    paginationItems.forEach((item, index) => {
+//       item.classList.toggle('hero-image-pagination-item-active', index === currentSlide);
+//    });
+// }
+
+// // Initialize the carousel
+// updateCarousel();
