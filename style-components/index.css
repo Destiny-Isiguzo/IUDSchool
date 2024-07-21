@@ -105,7 +105,7 @@ body {
 
 @keyframes skeleton-loading {
    0% {
-      background-color: hsl(200, 20%, 75%);
+      background-color: hsl(200, 20%, 60%);
    }
    
    100% {

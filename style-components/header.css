@@ -52,9 +52,6 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
-   position: sticky;
-   top: .875rem;
-   left: 0;
    margin-inline: var(--margin-inline);
    height: clamp(4rem, 3.8768rem + 0.5258vw, 4.35rem);
    z-index: var(--z-index-fixed);
@@ -255,6 +252,11 @@
    }
 
    .nav-link-active {
+      background-color: var(--primary-orange-95);
+   }
+
+   .nav-link:hover,
+   .dropdown-link:hover {
       background-color: var(--primary-orange-95);
    }
 
