@@ -260,6 +260,10 @@
       background-color: var(--primary-orange-95);
    }
 
+   .contact-nav-link:hover {
+      border-radius: 0 var(--border-radius-8) var(--border-radius-8) 0;
+   }
+
    .dropdown {
       position: relative;
    }

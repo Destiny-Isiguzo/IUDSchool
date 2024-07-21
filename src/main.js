@@ -58,13 +58,12 @@ const imageWrappers = document.querySelectorAll('.hero-image-wrapper');
 
 imageWrappers.forEach((wrapper) => {
    const img = wrapper.querySelector('img');
-   const imagePath = `assets/images/${img.dataset.image}`; // assuming data-image attribute is set on the img tag
+   const imagePath = `assets/images/${img.dataset.image}`; // with data-image attribute is set on the img tag
    const image = new Image();
 
    image.onload = () => {
       img.src = imagePath;
       img.classList.remove('skeleton');
-      // container.style.backgroundImage = `url(${imagePath})`;
    };
 
    image.src = imagePath;

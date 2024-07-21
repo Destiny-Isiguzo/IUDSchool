@@ -4,7 +4,8 @@
    gap: clamp(2.5rem, 2.2799rem + 0.9390vw, 3.125rem);
    align-items: center;
    margin-inline: var(--main-margin-inline);
-   margin-block: clamp(2.5rem, 2.1479rem + 1.5023vw, 3.5rem) 4.5rem;
+   margin-block: clamp(2.5rem, 2.1479rem + 1.5023vw, 3.5rem) 
+                  clamp(5rem, 4.4718rem + 2.2535vw, 6.5rem);
 }
 
 .hero-image-container {
@@ -85,6 +86,7 @@
    align-items: center;
    gap: .8rem;
    text-align: center;
+   margin: auto;
    max-width: 35.5rem;
 }
 
@@ -130,12 +132,18 @@
    transition: all var(--transition);
 }
 
-.hero-text-container-btn i {
-   font-size: var(--fs-s3);
+.hero-text-container-btn:hover {
+   filter: drop-shadow(5px 5px var(--primary-orange-65));
 }
 
-.hero-text-container-btn:is(:hover, :active) {
-   filter: drop-shadow(5px 5px var(--primary-orange-65));
+.hero-text-container-btn i {
+   color: var(--text-grey-15);
+   font-size: var(--fs-s3);
+   transition: transform var(--transition);
+}
+
+.hero-text-container-btn:hover i {
+   transform: translateX(.25rem);
 }
 
 

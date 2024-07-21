@@ -1,0 +1,97 @@
+.benefits {
+   display: flex;
+   flex-direction: column;
+   gap: clamp(3.125rem, 2.4648rem + 2.8169vw, 5rem);
+   margin-inline: var(--main-margin-inline);
+   margin-block: 0 clamp(5rem, 4.4718rem + 2.2535vw, 6.5rem);
+}
+
+.benefits-heading-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: clamp(0.625rem, 0.5370rem + 0.3756vw, 0.875rem);
+   text-align: center;
+}
+
+.benefits-intro-container {
+   background-color: var(--absolute-white);
+   border-radius: var(--border-radius-6);
+   border: var(--border);
+   font-family: var(--ff-outfit);
+   font-size: clamp(0.875rem, 0.8310rem + 0.1878vw, 1rem);
+   text-transform: capitalize;
+   padding: .5rem .875rem;
+   width: fit-content;
+}
+
+.benefits-title {
+   font-family: var(--ff-raleway);
+   font-size: var(--fs-xxl);
+   font-weight: var(--fw-bold);
+}
+
+.benefits-text-desc {
+   font-family: var(--ff-outfit);
+   max-width: 50rem;
+}
+
+.benefits-card-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+   gap: 3.5rem;
+}
+
+.benefits-card {
+   background-color: var(--absolute-white);
+   border: var(--border);
+   border-radius: var(--border-radius-10);
+   display: grid;
+   gap: 1rem;
+   box-shadow: 4px 4px 0 1px #1e1e1e;
+   padding: 3.125rem 1.875rem 1.875rem 1.875rem;
+   position: relative;
+}
+
+.benefits-card-icon-container {
+   background-color: var(--primary-orange-90);
+   border-radius: var(--border-radius-8);
+   border: var(--border);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 1rem;
+   width: 3.5rem;
+   height: 3.5rem;
+   position: absolute;
+   top: -1.8rem;
+   left: 1.875rem;
+}
+
+.benefits-card-icon-container i {
+   color: var(--text-grey-15);
+   font-size: 1.15rem;
+}
+
+.benefits-card-title {
+   font-family: var(--ff-raleway);
+   font-size: var(--fs-m2);
+   font-weight: var(--fw-bold);
+}
+
+.benefits-card-desc {
+   font-family: var(--ff-outfit);
+}
+
+
+
+
+/* TABLET TO LAPTOP NAVIGATION 
+   –––––––––––––––––––––––––––
+   BREAKPOINT 795px < 1440px
+*/
+@media screen and (min-width: 49.688em) {
+   .benefits-card-container {
+      gap: 3rem;
+   }
+}
