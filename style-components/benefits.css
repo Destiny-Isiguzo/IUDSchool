@@ -3,7 +3,7 @@
    flex-direction: column;
    gap: clamp(3.125rem, 2.4648rem + 2.8169vw, 5rem);
    margin-inline: var(--main-margin-inline);
-   margin-block: 0 clamp(5rem, 4.4718rem + 2.2535vw, 6.5rem);
+   margin-block: 0 clamp(5rem, 4.2958rem + 3.0047vw, 7rem);
 }
 
 .benefits-heading-container {
@@ -85,11 +85,16 @@
 
 
 
+/* BREAKPOINT 768px */
+@media screen and (max-width: 48em) {
+   .benefits-card-container {
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      gap: 2.5rem;
+   }
+}
 
-/* TABLET TO LAPTOP NAVIGATION 
-   –––––––––––––––––––––––––––
-   BREAKPOINT 795px < 1440px
-*/
+
+/* BREAKPOINT 795px < 1440px */
 @media screen and (min-width: 49.688em) {
    .benefits-card-container {
       gap: 3rem;

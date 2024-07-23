@@ -28,10 +28,12 @@
       <link rel="stylesheet" href="style-components/header.css">
       <link rel="stylesheet" href="style-components/hero.css">
       <link rel="stylesheet" href="style-components/benefits.css">
+      <link rel="stylesheet" href="style-components/testimonials.css">
       <!-- === -->
 
-      <script src="src/main.js" defer></script>
+      <script src="https://unpkg.com/swiper@8.3.2/swiper-bundle.min.js"></script>
       <script src="https://unpkg.com/scrollreveal"></script>
+      <script src="src/main.js" defer></script>
 
       <title>Home - IUDSchool &#8901; Competentia et Excellentia</title>
    </head>
@@ -66,6 +68,7 @@
 
          <img src="assets/images/abstract-design1.png" alt="Abstract image" class="top-banner-img2"/>
       </aside>
+      <!-- TOP BANNER -->
 
       <header class="header" role="banner">
          <a href="index.html" class="nav-logo-container" title="IUDSchool's logo">
@@ -164,6 +167,7 @@
             </div>
          </nav>
       </header>
+      <!-- HEADER -->
 
       <main class="main" role="main">
          <section class="hero">
@@ -218,6 +222,7 @@
                </a>
             </div>
          </section>
+         <!-- HERO -->
 
          <section class="benefits">
             <div class="benefits-heading-container">
@@ -237,29 +242,15 @@
             <div class="benefits-card-container">
                <div class="benefits-card">
                   <div class="benefits-card-icon-container">
-                     <i class="fa-solid fa-graduation-cap" aria-label="Graduation cap icon"></i>
+                     <i class="fa-solid fa-bell-concierge" aria-label="Attention icon"></i>
                   </div>
 
                   <h4 class="benefits-card-title">
-                     Holistic Learning Approach
+                     Individualized Attention
                   </h4>
 
                   <p class="benefits-card-desc">
-                     Our curriculum focuses on nurturing cognitive, social, emotional, and physical development, ensuring a well-rounded education.
-                  </p>
-               </div>
-
-               <div class="benefits-card">
-                  <div class="benefits-card-icon-container">
-                     <i class="fa-brands fa-web-awesome" aria-label="Crown icon"></i>
-                  </div>
-
-                  <h4 class="benefits-card-title">
-                     Experienced Educators
-                  </h4>
-
-                  <p class="benefits-card-desc">
-                     Our passionate and qualified teachers create a supportive and stimulating learning environment.
+                     Our small class sizes enable personalized attention, catering to each child's unique needs.
                   </p>
                </div>
 
@@ -293,20 +284,6 @@
 
                <div class="benefits-card">
                   <div class="benefits-card-icon-container">
-                     <i class="fa-solid fa-bell-concierge" aria-label="Attention icon"></i>
-                  </div>
-
-                  <h4 class="benefits-card-title">
-                     Individualized Attention
-                  </h4>
-
-                  <p class="benefits-card-desc">
-                     Our small class sizes enable personalized attention, catering to each child's unique needs.
-                  </p>
-               </div>
-
-               <div class="benefits-card">
-                  <div class="benefits-card-icon-container">
                      <i class="fa-solid fa-user-group" aria-label="Users icon"></i>
                   </div>
 
@@ -318,8 +295,140 @@
                      We foster a strong parent-school partnership to ensure seamless communication and collaboration.
                   </p>
                </div>
+
+               <div class="benefits-card">
+                  <div class="benefits-card-icon-container">
+                     <i class="fa-brands fa-web-awesome" aria-label="Crown icon"></i>
+                  </div>
+
+                  <h4 class="benefits-card-title">
+                     Experienced Educators
+                  </h4>
+
+                  <p class="benefits-card-desc">
+                     Our passionate and qualified teachers create a supportive and stimulating learning environment.
+                  </p>
+               </div>
+
+               <div class="benefits-card">
+                  <div class="benefits-card-icon-container">
+                     <i class="fa-solid fa-graduation-cap" aria-label="Graduation cap icon"></i>
+                  </div>
+
+                  <h4 class="benefits-card-title">
+                     Holistic Learning Approach
+                  </h4>
+
+                  <p class="benefits-card-desc">
+                     Our curriculum focuses on nurturing cognitive, social, emotional, and physical development, ensuring a well-rounded education.
+                  </p>
+               </div>
             </div>
          </section>
-      </main>
+         <!-- BENEFITS -->
+
+         <section class="testimonials">
+            <div class="testimonials-heading-container">
+               <div class="testimonials-intro-container">
+                  <p class="testimonials-intro-text">
+                     Their happy words &#128522;
+                  </p>
+               </div>
+
+               <h2 class="testimonials-title">Our Testimonials</h2>
+
+               <p class="testimonials-text-desc">
+                  We are proud to have a strong community of parents and children who love our school. Here are some of their kind words about their experience with us.
+               </p>
+            </div>
+
+            <div class="testimonial-slider-cards">
+               <div class="testimonial-card">
+                  <div class="testimonial-card-heading">
+                     <div class="testimonial-card-img-wrapper">
+                        <p class="testimonial-card-img-text">
+                           JB
+                        </p>
+                     </div>
+            
+                     <p class="testimonial-card-name">
+                        Jennifer B
+                     </p>
+                  </div>
+            
+                  <div class="testimonial-rating-container">
+                     <i class="fa-solid fa-star" aria-label="Rating icon"></i>
+                     <i class="fa-solid fa-star" aria-label="Rating icon"></i>
+                     <i class="fa-solid fa-star" aria-label="Rating icon"></i>
+                     <i class="fa-solid fa-star" aria-label="Rating icon"></i>
+                     <i class="fa-solid fa-star" aria-label="Rating icon"></i>
+                     <i class="fa-solid fa-star" aria-label="Rating icon"></i>
+                  </div>
+            
+                  <p class="testimonial-card-text">
+                     IUDSchool has been a second home for my child. The caring staff and engaging programs have made her excited
+                     to go to school every day!
+                  </p>
+               </div>
+            
+               <div class="testimonial-card">
+                  <div class="testimonial-card-heading">
+                     <div class="testimonial-card-img-wrapper">
+                        <p class="testimonial-card-img-text">
+                           JB
+                        </p>
+                     </div>
+            
+                     <p class="testimonial-card-name">
+                        Jennifer B
+                     </p>
+                  </div>
+            
+                  <div class="testimonial-rating-container">
+                     <i class="fa-solid fa-star" aria-label="Rating icon"></i>
+                     <i class="fa-solid fa-star" aria-label="Rating icon"></i>
+                     <i class="fa-solid fa-star" aria-label="Rating icon"></i>
+                     <i class="fa-solid fa-star" aria-label="Rating icon"></i>
+                     <i class="fa-solid fa-star" aria-label="Rating icon"></i>
+                     <i class="fa-solid fa-star" aria-label="Rating icon"></i>
+                  </div>
+            
+                  <p class="testimonial-card-text">
+                     IUDSchool has been a second home for my child. The caring staff and engaging programs have made her excited
+                     to go to school every day!
+                  </p>
+               </div>
+            
+               <div class="testimonial-card">
+                  <div class="testimonial-card-heading">
+                     <div class="testimonial-card-img-wrapper">
+                        <p class="testimonial-card-img-text">
+                           JB
+                        </p>
+                     </div>
+            
+                     <p class="testimonial-card-name">
+                        Jennifer B
+                     </p>
+                  </div>
+            
+                  <div class="testimonial-rating-container">
+                     <i class="fa-solid fa-star" aria-label="Rating icon"></i>
+                     <i class="fa-solid fa-star" aria-label="Rating icon"></i>
+                     <i class="fa-solid fa-star" aria-label="Rating icon"></i>
+                     <i class="fa-solid fa-star" aria-label="Rating icon"></i>
+                     <i class="fa-solid fa-star" aria-label="Rating icon"></i>
+                     <i class="fa-solid fa-star" aria-label="Rating icon"></i>
+                  </div>
+            
+                  <p class="testimonial-card-text">
+                     IUDSchool has been a second home for my child. The caring staff and engaging programs have made her excited
+                     to go to school every day!
+                  </p>
+               </div>
+            </div>
+         </section>
+         <!-- TESTIMONIALS -->
+      </main> 
    </body>
 </html>

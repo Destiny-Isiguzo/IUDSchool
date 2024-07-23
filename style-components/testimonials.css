@@ -1,0 +1,94 @@
+.testimonials {
+   display: flex;
+   flex-direction: column;
+   gap: clamp(3.125rem, 2.4648rem + 2.8169vw, 5rem);
+   margin-inline: var(--main-margin-inline);
+   margin-block: 0 clamp(5rem, 4.2958rem + 3.0047vw, 7rem);
+}
+
+.testimonials-heading-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: clamp(0.625rem, 0.537rem + 0.3756vw, 0.875rem);
+   text-align: center;
+}
+
+.testimonials-intro-container {
+   background-color: var(--absolute-white);
+   border-radius: var(--border-radius-6);
+   border: var(--border);
+   font-family: var(--ff-outfit);
+   font-size: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
+   text-transform: capitalize;
+   padding: 0.5rem 0.875rem;
+   width: fit-content;
+}
+
+.testimonials-title {
+   font-family: var(--ff-raleway);
+   font-size: var(--fs-xxl);
+   font-weight: var(--fw-bold);
+}
+
+.testimonials-text-desc {
+   font-family: var(--ff-outfit);
+   max-width: 50rem;
+}
+
+.testimonial-slider-cards {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+   gap: 2rem;
+}
+
+.testimonial-card {
+   background-color: var(--absolute-white);
+   border: var(--border);
+   border-radius: var(--border-radius-10);
+   box-shadow: 4px 4px 0 1px #1e1e1e;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   gap: 1.25rem;
+   text-align: center;
+   padding: 1.875rem;
+}
+
+.testimonial-card-heading {
+   display: flex;
+   flex-direction: column;
+   gap: .625rem;
+}
+
+.testimonial-card-img-wrapper {
+   background-color: var(--primary-orange-97);
+   border: .063rem solid var(--text-grey-20);
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: .5rem;
+   margin: auto;
+   width: 3.5rem;
+   height: 3.5rem;
+}
+
+.testimonial-card-img-text {
+   font-family: var(--ff-outfit);
+   font-size: var(--fs-s1);
+}
+
+.testimonial-card-name {
+   font-family: var(--ff-outfit);
+   font-size: var(--fs-m4);
+   font-weight: var(--fw-semibold);
+}
+
+.testimonial-rating-container i {
+   color: var(--primary-orange-65);
+}
+
+.testimonial-card-text {
+   font-family: var(--ff-outfit);
+}

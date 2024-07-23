@@ -5,7 +5,7 @@
    align-items: center;
    margin-inline: var(--main-margin-inline);
    margin-block: clamp(2.5rem, 2.1479rem + 1.5023vw, 3.5rem) 
-                  clamp(5rem, 4.4718rem + 2.2535vw, 6.5rem);
+                  clamp(5rem, 4.2958rem + 3.0047vw, 7rem);
 }
 
 .hero-image-container {
