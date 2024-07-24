@@ -46,8 +46,6 @@
    --fs-xl: clamp(1.875rem, 1.6549rem + 0.9390vw, 2.5rem); /* 30px - 40px */
    --fs-xxl: clamp(2.375rem, 2.1549rem + 0.9390vw, 3rem); /* 38px - 48px */
 
-   /* --fs-nav-menu-link: clamp(0.938rem, 0.9162rem + 0.0931vw, 1rem); */
-
    /* SPACING & SIZES */
    --border-radius-4: .25rem;
    --border-radius-6: .375rem;
@@ -61,7 +59,7 @@
    --z-index-fixed: 100;
    --z-index-scrollup-btn: 1000;
 
-
+   /* TRANSITIONS */
    --transition: .35s ease;
    --nav-menu-transition: .4s ease-in-out;
 }
@@ -99,7 +97,7 @@ body {
 
 @keyframes skeleton-loading {
    0% {
-      background-color: hsl(200, 20%, 65%);
+      background-color: hsl(200, 20%, 60%);
    }
    
    100% {
