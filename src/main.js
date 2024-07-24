@@ -169,3 +169,56 @@ function openAccordion(cardHeader) {
   cardHeader.querySelector('.faq-card-icon').classList.add('rotate');
   cardHeader.parentNode.classList.add('active-faq-card');
 };
+
+
+
+/**
+ * Handle scroll event
+*/
+const scrollToTopBtn = document.querySelector('.scrollup-btn');
+const SCROLL_UP_BTN_SHOW_SCROLL_Y = 1500; // Scroll Y position to show scroll up button
+
+function handleScroll() {
+   if (!scrollToTopBtn) return; // Check if the element exists
+
+   const scrollY = window.scrollY;
+   scrollToTopBtn.classList.toggle(
+      'scrollup-btn-show',
+      scrollY > SCROLL_UP_BTN_SHOW_SCROLL_Y
+   );
+}
+
+function scrollToTop() {
+   try {
+      window.scrollTo({
+         top: 0,
+         behavior: 'smooth',
+      });
+   } catch (error) {
+      console.error('Error scrolling to top:', error);
+   }
+}
+
+// Debounce the handleScroll function
+const debouncedHandleScroll = debounce(handleScroll, 100);
+
+// Initialize
+window.addEventListener('scroll', debouncedHandleScroll);
+scrollToTopBtn.addEventListener('click', scrollToTop);
+
+// Debounce function
+function debounce(func, wait) {
+   let timeout;
+   return function () {
+      clearTimeout(timeout);
+      timeout = setTimeout(func, wait);
+   };
+}
+
+
+
+/**
+ * Update footer year
+*/
+const year = document.querySelector('.year');
+year.innerText = new Date().getFullYear();
