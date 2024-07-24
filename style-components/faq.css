@@ -1,0 +1,108 @@
+.faq {
+   display: flex;
+   flex-direction: column;
+   gap: clamp(3.125rem, 2.4648rem + 2.8169vw, 5rem);
+   margin-inline: var(--main-margin-inline);
+   margin-block: 0 clamp(5rem, 4.2958rem + 3.0047vw, 7rem);
+}
+
+.faq-heading-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: clamp(0.625rem, 0.5370rem + 0.3756vw, 0.875rem);
+   text-align: center;
+}
+
+.faq-intro-container {
+   background-color: var(--absolute-white);
+   border-radius: var(--border-radius-6);
+   border: var(--border);
+   font-family: var(--ff-outfit);
+   font-size: clamp(0.875rem, 0.8310rem + 0.1878vw, 1rem);
+   text-transform: capitalize;
+   padding: .5rem .875rem;
+   width: fit-content;
+}
+
+.faq-title {
+   font-family: var(--ff-raleway);
+   font-size: var(--fs-xxl);
+   font-weight: var(--fw-bold);
+}
+
+.faq-text-desc {
+   font-family: var(--ff-outfit);
+   max-width: 50rem;
+}
+
+.faq-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+   gap: clamp(1.25rem, 0.8099rem + 1.8779vw, 2.5rem);
+}
+
+.faq-card-container {
+   display: flex;
+   flex-direction: column;
+   gap: clamp(1.25rem, 1.1620rem + 0.3756vw, 1.5rem);
+}
+
+.faq-card {
+   background-color: var(--primary-orange-95);
+   border: var(--border);
+   border-radius: var(--border-radius-10);
+   padding: clamp(1.3rem, 1.2296rem + 0.3005vw, 1.5rem);
+}
+
+.active-faq-card {
+   background-color: var(--absolute-white);
+}
+
+.faq-card-heading {
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: clamp(0.625rem, 0.3169rem + 1.3146vw, 1.5rem);
+}
+
+.faq-card-heading-title {
+   color: var(--text-grey-15);
+   font-size: 1.125rem;
+   font-family: var(--ff-outfit);
+   font-weight: var(--fw-semibold);
+}
+
+.faq-card-icon-container {
+   background-color: var(--primary-orange-97);
+   border: var(--border);
+   border-radius: var(--border-radius-4);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 2.5rem;
+   height: 2.15rem;
+   padding: .375rem;
+}
+
+.faq-card-icon {
+   color: var(--text-grey-15);
+   font-size: var(--fs-s2);
+   transition: transform var(--transition);
+}
+
+.faq-card-icon.rotate {
+   transform: rotate(45deg);
+}
+
+.faq-card-body {
+   max-height: 0;
+   overflow: hidden;
+   transition: max-height var(--transition);
+}
+
+.faq-card-body-content-text {
+   font-family: var(--ff-outfit);
+   padding-top: 1.7rem;
+}

@@ -130,3 +130,42 @@ window.addEventListener('load', () => {
 
 // // Initialize the carousel
 // updateCarousel();
+
+
+
+/**
+ * FAQ accordion
+*/
+const faqCardHeaders = document.querySelectorAll('.faq-card-heading');
+
+faqCardHeaders.forEach((cardHeader) => {
+   cardHeader.addEventListener('click', () => {
+      const isActive = cardHeader.classList.contains('faqActive');
+
+      if (isActive) {
+         closeAccordion(cardHeader);
+      } else {
+         const currentlyActiveCardHeader = document.querySelector('.faq-card-heading.faqActive');
+
+         if (currentlyActiveCardHeader) {
+            closeAccordion(currentlyActiveCardHeader);
+         }
+
+         openAccordion(cardHeader);
+      }
+   });
+});
+
+function closeAccordion(cardHeader) {
+  cardHeader.classList.remove('faqActive');
+  cardHeader.nextElementSibling.style.maxHeight = 0;
+  cardHeader.querySelector('.faq-card-icon').classList.remove('rotate');
+  cardHeader.parentNode.classList.remove('active-faq-card');
+}
+
+function openAccordion(cardHeader) {
+  cardHeader.classList.add('faqActive');
+  cardHeader.nextElementSibling.style.maxHeight = `${cardHeader.nextElementSibling.scrollHeight}px`;
+  cardHeader.querySelector('.faq-card-icon').classList.add('rotate');
+  cardHeader.parentNode.classList.add('active-faq-card');
+};

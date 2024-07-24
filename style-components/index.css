@@ -49,6 +49,7 @@
    /* --fs-nav-menu-link: clamp(0.938rem, 0.9162rem + 0.0931vw, 1rem); */
 
    /* SPACING & SIZES */
+   --border-radius-4: .25rem;
    --border-radius-6: .375rem;
    --border-radius-8: .5rem;
    --border-radius-10: .625rem;
